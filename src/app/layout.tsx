@@ -1,0 +1,49 @@
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { cn } from '@/lib/utils';
+import { Toaster } from '@/components/ui/toaster';
+import Header from '@/components/layout/header';
+import Footer from '@/components/layout/footer';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
+export const metadata: Metadata = {
+  title: 'SNK Overseas | Global Manpower Solutions from India to Middle East & Europe',
+  description:
+    'Empowering Indian talent with overseas jobs in the Middle East and Europe. Expert recruitment consultancy.',
+  openGraph: {
+    title: 'SNK Overseas | Global Manpower Solutions from India to Middle East & Europe',
+    description: 'Empowering Indian talent with overseas jobs in the Middle East and Europe. Expert recruitment consultancy.',
+    type: 'website',
+    url: 'https://snk-overseas.example.com',
+    images: [
+      {
+        url: 'https://picsum.photos/seed/og-image/1200/630',
+        width: 1200,
+        height: 630,
+        alt: 'SNK Overseas',
+      },
+    ],
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn('min-h-screen bg-background font-sans antialiased', inter.variable)}>
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+        <Toaster />
+      </body>
+    </html>
+  );
+}

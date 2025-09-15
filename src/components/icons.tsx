@@ -43,16 +43,20 @@ const FlightPath = (props: SVGProps) => (
 
     {/* Animated Planes */}
     <g>
+      <g transform="translate(-12, -12) rotate(40 12 12)">
         <Plane color="#00f6ff" />
-        <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
-            <mpath href="#path-europe" />
-        </animateMotion>
+      </g>
+      <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#path-europe" />
+      </animateMotion>
     </g>
     <g>
+      <g transform="translate(-12, -12) rotate(40 12 12)">
         <Plane color="#ffc400" />
-        <animateMotion dur="7s" repeatCount="indefinite" rotate="auto">
-            <mpath href="#path-me" />
-        </animateMotion>
+      </g>
+      <animateMotion dur="7s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#path-me" />
+      </animateMotion>
     </g>
   </svg>
 );

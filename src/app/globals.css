@@ -62,20 +62,39 @@
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
   }
   html {
     @apply scroll-smooth;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overscroll-behavior: none;
   }
   body {
     @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overscroll-behavior: none;
   }
-  section {
+  #__next {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .content-section {
     @apply w-full py-16 md:py-24 lg:py-32;
   }
   .animate-draw {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: draw 8s ease-in-out infinite;
+  }
+  
+  /* Prevent elements from extending beyond viewport */
+  * {
+    max-width: 100%;
   }
 }
 
@@ -88,5 +107,53 @@
   }
   100% {
     stroke-dashoffset: 1000;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee2 {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee2 {
+  display: flex;
+  animation: marquee2 30s linear infinite;
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@media (max-width: 768px) {
+  .animate-marquee {
+    animation-duration: 20s;
+  }
+  .animate-marquee2 {
+    animation-duration: 20s;
   }
 }

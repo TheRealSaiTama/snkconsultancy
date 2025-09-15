@@ -21,7 +21,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden p-0">
+    <section className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0">
         {heroBg && (
           <Image

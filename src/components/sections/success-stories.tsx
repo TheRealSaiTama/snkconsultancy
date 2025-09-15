@@ -41,7 +41,7 @@ const testimonials = [
 
 export default function SuccessStoriesSection() {
   return (
-    <section id="success" className="bg-background">
+    <section id="success" className="content-section bg-background">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <AnimatedSection>
           <h2 className="text-4xl md:text-5xl font-bold text-primary">Real Stories, Real Impact</h2>

@@ -91,7 +91,7 @@ export default function ContactSection() {
 
   return (
     <>
-    <section id="contact" className="bg-primary text-primary-foreground">
+    <section id="contact" className="content-section bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="text-center">
           <h2 className="text-4xl md:text-5xl font-bold">Ready to Connect Globally?</h2>
@@ -193,18 +193,45 @@ export default function ContactSection() {
             </div>
              <div className="md:col-span-2 space-y-8">
                  <AnimatedSection delay="delay-400">
-                    <div className="space-y-4 text-lg">
-                        <a href="mailto:Info.snkoverseas@gmail.com" className="flex items-center gap-4 hover:text-accent transition-colors">
-                            <Mail className="w-6 h-6"/>
-                            <span>Info.snkoverseas@gmail.com</span>
-                        </a>
-                        <a href="tel:+919911103791" className="flex items-center gap-4 hover:text-accent transition-colors">
-                            <Phone className="w-6 h-6"/>
-                            <span>+91 9911103791</span>
-                        </a>
-                        <div className="flex items-start gap-4">
-                            <MapPin className="w-6 h-6 mt-1"/>
-                            <span>New Delhi, India</span>
+                    <div className="bg-primary text-primary-foreground rounded-lg border p-6 shadow-lg">
+                        <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+                        <div className="space-y-4">
+                            <a href="mailto:Info.snkoverseas@gmail.com" className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary/90 transition-colors">
+                                <div className="bg-primary-foreground/20 p-2 rounded-full">
+                                    <Mail className="w-5 h-5 text-primary-foreground"/>
+                                </div>
+                                <div>
+                                    <div className="text-sm text-primary-foreground/80">Email</div>
+                                    <div className="font-medium text-primary-foreground">Info.snkoverseas@gmail.com</div>
+                                </div>
+                            </a>
+                            <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary/90 transition-colors">
+                                <div className="bg-primary-foreground/20 p-2 rounded-full">
+                                    <Phone className="w-5 h-5 text-primary-foreground"/>
+                                </div>
+                                <div>
+                                    <div className="text-sm text-primary-foreground/80">Primary Contact</div>
+                                    <a href="tel:+918700348338" className="text-lg font-bold hover:text-accent transition-colors">+91 8700348338</a>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary/90 transition-colors">
+                                <div className="bg-primary-foreground/20 p-2 rounded-full">
+                                    <Phone className="w-5 h-5 text-primary-foreground"/>
+                                </div>
+                                <div>
+                                    <div className="text-sm text-primary-foreground/80">Secondary Contact</div>
+                                    <a href="tel:+919911103791" className="text-lg font-medium hover:text-accent transition-colors">+91 9911103791</a>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-4 p-3 rounded-lg hover:bg-primary/90 transition-colors">
+                                <div className="bg-primary-foreground/20 p-2 rounded-full mt-1">
+                                    <MapPin className="w-5 h-5 text-primary-foreground"/>
+                                </div>
+                                <div>
+                                    <div className="text-sm text-primary-foreground/80">Location</div>
+                                    <div className="font-medium text-primary-foreground">New Delhi, India</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </AnimatedSection>

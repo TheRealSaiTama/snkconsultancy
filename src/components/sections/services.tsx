@@ -1,84 +1,205 @@
+"use client";
+
 import { Wrench, UtensilsCrossed, Factory, ShoppingCart, ShieldCheck, Ship, Plane, Search, FileText, School, UserCheck } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import AnimatedSection from '../animated-section';
+import { motion } from 'framer-motion';
 
 const industries = [
-  { name: 'Construction', icon: <Wrench className="h-8 w-8 mb-4 text-primary" />, desc: 'Skilled laborers for Middle East projects.' },
-  { name: 'Hospitality', icon: <UtensilsCrossed className="h-8 w-8 mb-4 text-primary" />, desc: 'Staff for hotels, restaurants, and catering.' },
-  { name: 'Oil & Gas', icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 mb-4 text-primary"><path d="M14 3h2.5a2 2 0 0 1 2 1.83l1.5 9.35A2 2 0 0 1 18.22 16H5.78a2 2 0 0 1-1.79-2.82l1.5-9.35A2 2 0 0 1 7.5 3H10"></path><path d="M14 3v3a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2V3"></path><path d="M12 21v-8"></path><path d="M12 21H8l-1-4"></path><path d="m12 21 4-1-1-3"></path></svg>, desc: 'Technical experts for offshore and onshore roles.' },
-  { name: 'Manufacturing', icon: <Factory className="h-8 w-8 mb-4 text-primary" />, desc: 'Production line workers and supervisors.' },
-  { name: 'Retail', icon: <ShoppingCart className="h-8 w-8 mb-4 text-primary" />, desc: 'Sales associates and managers for global brands.' },
-  { name: 'Security', icon: <ShieldCheck className="h-8 w-8 mb-4 text-primary" />, desc: 'Trained security personnel for various sectors.' },
-  { name: 'Logistics', icon: <Ship className="h-8 w-8 mb-4 text-primary" />, desc: 'Warehouse and supply chain professionals.' },
-  { name: 'Aviation', icon: <Plane className="h-8 w-8 mb-4 text-primary" />, desc: 'Ground staff and maintenance crews.' },
+  { 
+    name: 'Construction', 
+    icon: Wrench, 
+    desc: 'Skilled laborers for Middle East projects.',
+    gradient: 'from-amber-500 to-orange-600'
+  },
+  { 
+    name: 'Hospitality', 
+    icon: UtensilsCrossed, 
+    desc: 'Staff for hotels, restaurants, and catering.',
+    gradient: 'from-rose-500 to-pink-600'
+  },
+  { 
+    name: 'Oil & Gas', 
+    icon: Factory, 
+    desc: 'Technical experts for offshore and onshore roles.',
+    gradient: 'from-blue-500 to-cyan-600'
+  },
+  { 
+    name: 'Manufacturing', 
+    icon: Factory, 
+    desc: 'Production line workers and supervisors.',
+    gradient: 'from-emerald-500 to-teal-600'
+  },
+  { 
+    name: 'Retail', 
+    icon: ShoppingCart, 
+    desc: 'Sales associates and managers for global brands.',
+    gradient: 'from-purple-500 to-indigo-600'
+  },
+  { 
+    name: 'Security', 
+    icon: ShieldCheck, 
+    desc: 'Trained security personnel for various sectors.',
+    gradient: 'from-red-500 to-rose-600'
+  },
+  { 
+    name: 'Logistics', 
+    icon: Ship, 
+    desc: 'Warehouse and supply chain professionals.',
+    gradient: 'from-cyan-500 to-blue-600'
+  },
+  { 
+    name: 'Aviation', 
+    icon: Plane, 
+    desc: 'Ground staff and maintenance crews.',
+    gradient: 'from-violet-500 to-purple-600'
+  },
 ];
 
 const processSteps = [
-    { icon: <Search/>, title: 'Consultation', description: 'Understanding your specific manpower needs.' },
-    { icon: <FileText/>, title: 'Screening', description: 'Vetting candidates for skill and reliability.' },
-    { icon: <School/>, title: 'Training', description: 'Upskilling talent to meet global standards.' },
-    { icon: <UserCheck/>, title: 'Placement', description: 'Seamlessly integrating employees into your team.' },
+    { icon: Search, title: 'Consultation', description: 'Understanding your specific manpower needs.' },
+    { icon: FileText, title: 'Screening', description: 'Vetting candidates for skill and reliability.' },
+    { icon: School, title: 'Training', description: 'Upskilling talent to meet global standards.' },
+    { icon: UserCheck, title: 'Placement', description: 'Seamlessly integrating employees into your team.' },
 ];
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="bg-secondary">
-      <div className="container mx-auto px-4 md:px-6 text-center">
-        <AnimatedSection>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary">Industries We Serve</h2>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-            We specialize in sourcing top-tier talent across a wide range of sectors for opportunities abroad.
-          </p>
-        </AnimatedSection>
-        
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {industries.map((industry, index) => (
-            <AnimatedSection key={industry.name} delay={`delay-${index * 100}`}>
-              <Card className="text-center hover:shadow-lg hover:-translate-y-2 transition-transform duration-300 h-full">
-                <CardHeader>
-                  <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit">
-                    {industry.icon}
-                  </div>
-                  <CardTitle className="text-primary">{industry.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-sm">{industry.desc}</p>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-          ))}
+    <section id="services" className="content-section relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-primary/5 to-accent/5 rounded-tl-full"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="text-center mb-20">
+          <motion.h2 
+            className="text-4xl md:text-6xl font-bold text-primary mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Industries We <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Serve</span>
+          </motion.h2>
+          <motion.p 
+            className="max-w-3xl mx-auto text-xl text-muted-foreground"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Connecting global talent with opportunities across continents
+          </motion.p>
         </div>
         
-        <div className="mt-24">
-            <AnimatedSection>
-                <h3 className="text-3xl md:text-4xl font-bold text-primary">Our Process</h3>
-                <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-                    A streamlined journey from requirement to deployment, ensuring quality and efficiency.
-                </p>
-            </AnimatedSection>
-            <div className="relative mt-16 max-w-4xl mx-auto">
-                <div className="absolute left-1/2 top-0 h-full w-0.5 bg-border hidden md:block" aria-hidden="true"></div>
-                
-                {processSteps.map((step, index) => (
-                    <AnimatedSection key={step.title} delay={`delay-${index * 200}`} className="mb-12 md:mb-0">
-                        <div className="flex md:items-center flex-col md:flex-row">
-                            <div className={`flex-1 md:pr-8 text-center md:text-left ${index % 2 === 0 ? 'md:text-right md:pr-8' : 'md:text-left md:pl-8 md:order-2'}`}>
-                                <div className="inline-block bg-background p-4 rounded-full border-2 border-primary shadow-lg">
-                                    <step.icon.type className="w-8 h-8 text-primary" />
-                                </div>
-                                <h4 className="mt-4 text-2xl font-bold text-primary">{step.title}</h4>
-                                <p className="mt-2 text-muted-foreground">{step.description}</p>
-                            </div>
-                            <div className="relative flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-2xl z-10 my-4 md:my-0">
-                                {index + 1}
-                            </div>
-                            <div className={`flex-1 ${index % 2 === 0 ? 'md:pl-8' : 'md:order-1'}`}></div>
+        {/* Industries Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
+          {industries.map((industry, index) => {
+            const IconComponent = industry.icon;
+            return (
+              <motion.div
+                key={industry.name}
+                className="group relative"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -10 }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                <div className="relative bg-card rounded-2xl p-8 h-full border border-border/50 shadow-lg group-hover:shadow-xl transition-all duration-500">
+                  <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${industry.gradient} mb-6 text-white p-3`}>
+                    <IconComponent className="h-12 w-12" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-3">{industry.name}</h3>
+                  <p className="text-muted-foreground">{industry.desc}</p>
+                  
+                  {/* Hover Effect */}
+                  <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${industry.gradient} rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+        
+        {/* Process Section */}
+        <div className="mt-32">
+            <div className="text-center mb-20">
+              <motion.h3 
+                className="text-3xl md:text-5xl font-bold text-primary mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                Our <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Seamless</span> Process
+              </motion.h3>
+              <motion.p 
+                className="max-w-2xl mx-auto text-xl text-muted-foreground"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                From requirement to deployment in four simple steps
+              </motion.p>
+            </div>
+            
+            {/* Process Timeline */}
+            <div className="relative">
+              {/* Central Line */}
+              <div className="absolute left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-primary/20 via-accent/40 to-primary/20 hidden lg:block -translate-x-1/2"></div>
+              
+              <div className="space-y-12">
+                {processSteps.map((step, index) => {
+                  const IconComponent = step.icon;
+                  return (
+                    <motion.div
+                      key={step.title}
+                      className="relative flex flex-col lg:flex-row items-center"
+                      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: index * 0.2 }}
+                    >
+                      {/* Step Number */}
+                      <div className="absolute left-1/2 top-0 w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-primary-foreground font-bold text-2xl shadow-lg -translate-x-1/2 -translate-y-1/2 z-10">
+                        {index + 1}
+                      </div>
+                      
+                      {/* Content */}
+                      <div className={`lg:w-5/12 ${index % 2 === 0 ? 'lg:pr-16 lg:text-right' : 'lg:pl-16 lg:order-last lg:text-left'} text-center`}>
+                        <div className="bg-card rounded-2xl p-8 border border-border/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                          <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary mb-4">
+                            <IconComponent className="w-8 h-8" />
+                          </div>
+                          <h4 className="text-2xl font-bold text-primary mb-3">{step.title}</h4>
+                          <p className="text-muted-foreground">{step.description}</p>
                         </div>
-                    </AnimatedSection>
-                ))}
+                      </div>
+                      
+                      {/* Empty column for spacing */}
+                      <div className="lg:w-2/12"></div>
+                      
+                      {/* Visual Element */}
+                      <div className="lg:w-5/12 mt-8 lg:mt-0">
+                        <div className="h-32 flex items-center justify-center">
+                          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </div>
         </div>
       </div>
+      
+      {/* Decorative Elements */}
+      <div className="absolute top-20 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
     </section>
   );
 }

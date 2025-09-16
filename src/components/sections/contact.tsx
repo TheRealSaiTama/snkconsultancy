@@ -91,7 +91,7 @@ export default function ContactSection() {
 
   return (
     <>
-    <section id="contact" className="content-section bg-primary text-primary-foreground">
+    <section id="contact" className="content-section bg-primary text-primary-foreground scroll-mt-28">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="text-center">
           <h2 className="text-4xl md:text-5xl font-bold">Ready to Connect Globally?</h2>

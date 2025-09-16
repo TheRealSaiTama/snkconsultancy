@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, Home, Info, Briefcase, Award, Mail } from 'lucide-react';
+import { Menu, X, Home, Info, Briefcase, Award, Mail, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
@@ -12,6 +12,7 @@ const navLinks = [
   { href: '#home', label: 'Home', icon: <Home /> },
   { href: '#about', label: 'About', icon: <Info /> },
   { href: '#services', label: 'Services', icon: <Briefcase /> },
+  { href: '#founder', label: 'Founder', icon: <User /> },
   { href: '#success', label: 'Success', icon: <Award /> },
   { href: '#contact', label: 'Contact', icon: <Mail /> },
 ];
@@ -44,11 +45,19 @@ export default function Header() {
         <div className="flex items-center pr-4 md:pr-6">
           <nav className="hidden md:flex items-center space-x-2">
             {navLinks.map((link) => (
-              <Button key={link.href} variant="ghost" asChild>
-                <Link
-                  href={link.href}
-                  className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-                >
+              <Button
+                key={link.href}
+                variant="ghost"
+                asChild
+                className={cn(
+                  'group relative inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 overflow-hidden',
+                  isScrolled
+                    ? 'text-foreground/90 hover:text-foreground bg-foreground/5 hover:bg-foreground/10 border border-foreground/10'
+                    : 'text-white/95 hover:text-white bg-white/10 hover:bg-white/15 border border-white/15 backdrop-blur-md shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08)]'
+                )}
+              >
+                <Link href={link.href} className="flex items-center gap-2">
+                  <span className="pointer-events-none absolute inset-0 -z-10 before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/0 before:via-white/20 before:to-white/0 before:-translate-x-full group-hover:before:translate-x-full before:transition-transform before:duration-700 before:rounded-full" />
                   {link.icon}
                   <span>{link.label}</span>
                 </Link>
@@ -78,10 +87,11 @@ export default function Header() {
                   </div>
                   <nav className="flex flex-col items-start space-y-2 p-4">
                     {navLinks.map((link) => (
-                       <Button key={link.href} variant="ghost" asChild className="w-full justify-start text-lg">
+                       <Button key={link.href} variant="ghost" asChild className="w-full justify-start text-lg rounded-xl border border-border bg-background/60 hover:bg-foreground/5">
                           <Link
                             href={link.href}
                             onClick={() => setIsMobileMenuOpen(false)}
+                            className="flex items-center gap-2"
                           >
                             {link.icon}
                             <span>{link.label}</span>

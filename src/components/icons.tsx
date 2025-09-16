@@ -13,7 +13,7 @@ const FlightPath = (props: SVGProps) => (
   >
     <defs>
       <path id="path-europe" d="M430 450 C 350 350, 200 300, 150 150" />
-      <path id="path-me" d="M430 450 C 550 380, 700 300, 750 250" />
+      <path id="path-me" d="M430 450 C 550 360, 700 260, 750 200" />
       <filter id="glow">
         <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
         <feMerge>
@@ -38,8 +38,8 @@ const FlightPath = (props: SVGProps) => (
     <circle cx="150" cy="150" r="5" fill="#00f6ff" />
     <text x="160" y="140" fill="white" fontSize="12">Europe</text>
     
-    <circle cx="750" cy="250" r="5" fill="#ffc400" />
-    <text x="700" y="240" fill="white" fontSize="12">Middle East</text>
+    <circle cx="750" cy="200" r="5" fill="#ffc400" />
+    <text x="700" y="185" fill="white" fontSize="12">Middle East</text>
 
     {/* Animated Planes */}
     <g>

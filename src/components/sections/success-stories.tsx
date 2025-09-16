@@ -41,7 +41,7 @@ const testimonials = [
 
 export default function SuccessStoriesSection() {
   return (
-    <section id="success" className="content-section bg-background">
+    <section id="success" className="content-section bg-background scroll-mt-28">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <AnimatedSection>
           <h2 className="text-4xl md:text-5xl font-bold text-primary">Real Stories, Real Impact</h2>
@@ -63,24 +63,27 @@ export default function SuccessStoriesSection() {
                 const avatar = PlaceHolderImages.find((img) => img.id === testimonial.avatarId);
                 return (
                   <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3 p-4">
-                    <Card className="h-full flex flex-col justify-between">
-                      <CardContent className="flex flex-col items-center justify-center text-center p-6">
+                    <Card className="h-full flex flex-col justify-between border-0 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl hover:from-white/15 hover:to-white/10 transition-all duration-300 group">
+                      <CardContent className="flex flex-col items-center justify-center text-center p-8">
                         {avatar && (
-                          <Image
-                            src={avatar.imageUrl}
-                            alt={testimonial.name}
-                            data-ai-hint={avatar.imageHint}
-                            width={80}
-                            height={80}
-                            className="rounded-full mb-4"
-                          />
+                          <div className="relative mb-6">
+                            <div className="absolute -inset-2 bg-gradient-to-r from-primary to-accent rounded-full opacity-75 blur group-hover:opacity-100 transition-opacity duration-300" />
+                            <Image
+                              src={avatar.imageUrl}
+                              alt={testimonial.name}
+                              data-ai-hint={avatar.imageHint}
+                              width={80}
+                              height={80}
+                              className="relative rounded-full border-2 border-white/20"
+                            />
+                          </div>
                         )}
-                        <p className="italic text-muted-foreground">"{testimonial.quote}"</p>
-                        <div className="mt-4">
-                            <h3 className="font-semibold text-primary">{testimonial.name}</h3>
-                            <div className="flex justify-center mt-1">
+                        <p className="italic text-base text-muted-foreground leading-relaxed">"{testimonial.quote}"</p>
+                        <div className="mt-6">
+                            <h3 className="font-bold text-lg bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{testimonial.name}</h3>
+                            <div className="flex justify-center mt-2">
                                 {Array(testimonial.rating).fill(0).map((_, i) => (
-                                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                                    <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
                                 ))}
                             </div>
                         </div>

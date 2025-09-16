@@ -63,7 +63,7 @@ const processSteps = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="content-section relative overflow-hidden">
+    <section id="services" className="content-section relative overflow-hidden scroll-mt-28">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-br from-primary/5 to-accent/5"></div>
@@ -107,15 +107,16 @@ export default function ServicesSection() {
                 whileHover={{ y: -10 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                <div className="relative bg-card rounded-2xl p-8 h-full border border-border/50 shadow-lg group-hover:shadow-xl transition-all duration-500">
-                  <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${industry.gradient} mb-6 text-white p-3`}>
+                <div className="relative bg-white/5 backdrop-blur-xl rounded-2xl p-8 h-full border border-white/10 shadow-lg group-hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className={`relative inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${industry.gradient} mb-6 text-white p-3 shadow-lg`}>
                     <IconComponent className="h-12 w-12" />
                   </div>
-                  <h3 className="text-2xl font-bold text-primary mb-3">{industry.name}</h3>
-                  <p className="text-muted-foreground">{industry.desc}</p>
+                  <h3 className="relative text-2xl font-bold text-foreground mb-3">{industry.name}</h3>
+                  <p className="relative text-muted-foreground">{industry.desc}</p>
                   
                   {/* Hover Effect */}
-                  <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${industry.gradient} rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                  <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${industry.gradient} rounded-b-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}></div>
                 </div>
               </motion.div>
             );
@@ -169,13 +170,14 @@ export default function ServicesSection() {
                       
                       {/* Content */}
                       <div className={`lg:w-5/12 ${index % 2 === 0 ? 'lg:pr-16 lg:text-right' : 'lg:pl-16 lg:order-last lg:text-left'} text-center`}>
-                        <div className="bg-card rounded-2xl p-8 border border-border/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                          <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary mb-4">
-                            <IconComponent className="w-8 h-8" />
-                          </div>
-                          <h4 className="text-2xl font-bold text-primary mb-3">{step.title}</h4>
-                          <p className="text-muted-foreground">{step.description}</p>
+                      <div className="relative bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="relative inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 text-primary mb-4">
+                          <IconComponent className="w-8 h-8" />
                         </div>
+                        <h4 className="relative text-2xl font-bold text-foreground mb-3">{step.title}</h4>
+                        <p className="relative text-muted-foreground">{step.description}</p>
+                      </div>
                       </div>
                       
                       {/* Empty column for spacing */}

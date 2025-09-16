@@ -1,6 +1,7 @@
 "use client";
 
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { Briefcase, Globe, Smile, UserCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -59,25 +60,22 @@ const Counter = ({ to, suffix = '' }: { to: number, suffix?: string }) => {
   return <span ref={ref}>{count.toLocaleString()}{suffix}</span>;
 };
 
+const GlobeDemo = dynamic(() => import('@/registry/magicui/globe-demo').then((m) => m.GlobeDemo), { ssr: false });
 
 export default function AboutSection() {
   const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-professionals');
 
   return (
-    <section id="about" className="content-section bg-background">
+    <section id="about" className="content-section bg-background scroll-mt-28">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <AnimatedSection>
-            {aboutImage && (
-              <Image
-                src={aboutImage.imageUrl}
-                alt={aboutImage.description}
-                data-ai-hint={aboutImage.imageHint}
-                width={800}
-                height={600}
-                className="rounded-lg shadow-lg object-cover w-full h-auto"
-              />
-            )}
+            <div className="relative rounded-2xl overflow-hidden bg-white/5 backdrop-blur-xl">
+              <div className="absolute w-full bottom-0 inset-x-0 h-20 bg-gradient-to-b pointer-events-none select-none from-transparent to-background z-10" />
+              <div className="relative w-full h-[22rem] md:h-[28rem]">
+                <GlobeDemo />
+              </div>
+            </div>
           </AnimatedSection>
           <AnimatedSection delay="delay-200">
             <h2 className="text-4xl md:text-5xl font-bold text-primary">
@@ -88,13 +86,14 @@ export default function AboutSection() {
             </p>
             <div className="mt-8 grid grid-cols-2 gap-6">
               {stats.map((stat) => (
-                <Card key={stat.label} className="border-l-4 border-primary bg-secondary/50">
-                  <CardHeader className="flex flex-row items-center justify-between pb-2">
-                    <CardTitle className="text-sm font-medium">{stat.label}</CardTitle>
-                    {stat.icon}
+                <Card key={stat.label} className="group relative border-0 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl hover:from-white/15 hover:to-white/10 transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 rounded-lg" />
+                  <CardHeader className="relative flex flex-row items-center justify-between pb-2">
+                    <CardTitle className="text-sm font-medium text-muted-foreground">{stat.label}</CardTitle>
+                    <div className="text-primary/80">{stat.icon}</div>
                   </CardHeader>
-                  <CardContent>
-                    <div className="text-3xl font-bold text-primary">
+                  <CardContent className="relative">
+                    <div className="text-4xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                        <Counter to={stat.value} suffix={stat.suffix} />
                        {stat.value >= 5000 && '+'}
                     </div>

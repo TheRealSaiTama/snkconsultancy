@@ -112,7 +112,7 @@
 
 @keyframes marquee {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-100%); }
 }
 
 @keyframes marquee2 {
@@ -129,7 +129,7 @@
 
 .animate-marquee {
   display: flex;
-  animation: marquee 30s linear infinite;
+  animation: marquee 45s linear infinite;
 }
 
 .animate-marquee2 {
@@ -151,9 +151,24 @@
 
 @media (max-width: 768px) {
   .animate-marquee {
-    animation-duration: 20s;
+    animation-duration: 35s;
   }
   .animate-marquee2 {
-    animation-duration: 20s;
+    animation-duration: 35s;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
 }

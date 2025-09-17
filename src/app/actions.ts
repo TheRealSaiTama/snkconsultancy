@@ -61,14 +61,14 @@ export async function submitInquiry(prevState: State, formData: FormData): Promi
 
     // 3. Create the email content with UX and deliverability improvements
     const mailOptions = {
-      from: `"${name} via SNK Overseas" <${process.env.EMAIL_USER}>`,
+      from: `"${name} via SNK Global" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_TO,
       // --- BEST PRACTICE 3: Set `replyTo` for seamless communication ---
       // When you hit "Reply" in your inbox, the response will go to the user's email, not your own.
       replyTo: email,
       subject: `New Inquiry from ${name} (${inquiryTypeDisplay})`,
       text: `
-        You have a new inquiry from the SNK Overseas website:
+        You have a new inquiry from the SNK Global website:
 
         Name: ${name}
         Email: ${email}

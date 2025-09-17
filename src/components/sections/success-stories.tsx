@@ -28,7 +28,7 @@ const testimonials = [
     name: 'Priya S.',
     avatarId: 'testimonial-avatar-2',
     rating: 5,
-    quote: "As an employer, finding reliable talent from India was a challenge. SNK Overseas delivered exceptional candidates for our construction projects in Qatar.",
+    quote: "As an employer, finding reliable talent from India was a challenge. SNK Global delivered exceptional candidates for our construction projects in Qatar.",
   },
   {
     id: 3,
@@ -100,7 +100,7 @@ export default function SuccessStoriesSection() {
         
         <AnimatedSection delay="delay-400" className="mt-16">
             <Button asChild size="lg" className="transition-transform hover:scale-105">
-                <Link href="mailto:info.snkoverseas@gmail.com?subject=Inquiry about Current Vacancies">View Current Vacancies</Link>
+                <Link href="mailto:info@snkglobalindia.com?subject=Inquiry%20about%20Current%20Vacancies">View Current Vacancies</Link>
             </Button>
         </AnimatedSection>
       </div>

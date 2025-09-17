@@ -13,11 +13,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'SNK Overseas | Global Manpower Solutions from India to Middle East & Europe',
+  title: 'SNK Global | Global Manpower Solutions from India to Middle East & Europe',
   description:
     'Empowering Indian talent with overseas jobs in the Middle East and Europe. Expert recruitment consultancy.',
   openGraph: {
-    title: 'SNK Overseas | Global Manpower Solutions from India to Middle East & Europe',
+    title: 'SNK Global | Global Manpower Solutions from India to Middle East & Europe',
     description: 'Empowering Indian talent with overseas jobs in the Middle East and Europe. Expert recruitment consultancy.',
     type: 'website',
     url: 'https://snk-overseas.example.com',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: 'https://picsum.photos/seed/og-image/1200/630',
         width: 1200,
         height: 630,
-        alt: 'SNK Overseas',
+        alt: 'SNK Global',
       },
     ],
   },

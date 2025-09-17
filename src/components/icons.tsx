@@ -78,7 +78,7 @@ const SNKLogo = (props: SVGProps) => (
       <path d="M 10 30 L 10 10 L 30 10 L 10 30 Z" fill="url(#logoGradient)" />
       <path d="M 30 10 L 30 30 L 10 30 L 30 10 Z" fill="url(#logoGradient)" opacity="0.6" />
       <text x="40" y="28" fontFamily="sans-serif" fontSize="24" fontWeight="bold" fill="hsl(var(--primary))">
-        SNK Overseas
+        SNK Global
       </text>
     </svg>
 );

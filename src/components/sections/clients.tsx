@@ -124,7 +124,7 @@ export default function ClientsSection() {
             </div>
             
             <blockquote className="text-2xl md:text-3xl font-light text-white/95 leading-relaxed mb-8 max-w-4xl mx-auto">
-              "SNK Overseas has consistently delivered exceptional talent that drives our business forward. Their understanding of our industry needs is unmatched."
+              "SNK Global has consistently delivered exceptional talent that drives our business forward. Their understanding of our industry needs is unmatched."
             </blockquote>
             
             <div className="text-white/80 font-medium">

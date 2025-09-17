@@ -1,10 +1,10 @@
-# **App Name**: SNK Overseas
+# **App Name**: SNK Global
 
 ## Core Features:
 
 - Service Recommendations: Suggest optimal services from a range of potential solutions for a user. To recommend the optimal solutions, this feature acts as a tool by taking the user-provided goal, extracting associated details, identifying appropriate solutions, and assessing/selecting solutions that meet the stated user objectives.
-- Informational Sections: Sections dedicated to inform potential customers and job-seekers of the mission, values, services and successful placements of SNK overseas.
-- Interactive Map: Illustrate SNK Overseas's global reach with an interactive map showing the routes from India to the Middle East and Europe.
+- Informational Sections: Sections dedicated to inform potential customers and job-seekers of the mission, values, services and successful placements of SNK Global.
+- Interactive Map: Illustrate SNK Global's global reach with an interactive map showing the routes from India to the Middle East and Europe.
 - Contact Form: Allow potential customers and job-seekers to easily send inquiries to the company.
 - Clear CTAs: Buttons and links designed for directing users to the service sections for employers and success sections for job seekers.
 

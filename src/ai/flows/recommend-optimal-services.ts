@@ -14,7 +14,7 @@ import {z} from 'genkit';
 const RecommendOptimalServicesInputSchema = z.object({
   userGoal: z
     .string()
-    .describe('The user provided goals for SNK Overseas services.'),
+    .describe('The user provided goals for SNK Global services.'),
 });
 export type RecommendOptimalServicesInput = z.infer<
   typeof RecommendOptimalServicesInputSchema
@@ -39,11 +39,11 @@ const prompt = ai.definePrompt({
   name: 'recommendOptimalServicesPrompt',
   input: {schema: RecommendOptimalServicesInputSchema},
   output: {schema: RecommendOptimalServicesOutputSchema},
-  prompt: `You are an expert consultant at SNK Overseas, specializing in manpower solutions. A user will provide a goal, and you will recommend the most suitable services offered by SNK Overseas to help them achieve that goal.
+  prompt: `You are an expert consultant at SNK Global, specializing in manpower solutions. A user will provide a goal, and you will recommend the most suitable services offered by SNK Global to help them achieve that goal.
 
 User Goal: {{{userGoal}}}
 
-Consider the following services offered by SNK Overseas:
+Consider the following services offered by SNK Global:
 - Recruitment
 - Visa Assistance
 - Training

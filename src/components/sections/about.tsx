@@ -82,7 +82,7 @@ export default function AboutSection() {
               Your Trusted Partner in Global Mobility
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              With over 10 years of expertise, SNK Overseas specializes in manpower solutions, connecting ambitious Indians with opportunities in construction, hospitality, oil & gas, and more. We handle visas, training, and placements with integrity.
+              With over 10 years of expertise, SNK Global specializes in manpower solutions, connecting ambitious Indians with opportunities in construction, hospitality, oil & gas, and more. We handle visas, training, and placements with integrity.
             </p>
             <div className="mt-8 grid grid-cols-2 gap-6">
               {stats.map((stat) => (

@@ -196,13 +196,13 @@ export default function ContactSection() {
                     <div className="bg-primary text-primary-foreground rounded-lg border p-6 shadow-lg">
                         <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
                         <div className="space-y-4">
-                            <a href="mailto:Info.snkoverseas@gmail.com" className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary/90 transition-colors">
+                            <a href="mailto:info@snkglobalindia.com" className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary/90 transition-colors">
                                 <div className="bg-primary-foreground/20 p-2 rounded-full">
                                     <Mail className="w-5 h-5 text-primary-foreground"/>
                                 </div>
                                 <div>
                                     <div className="text-sm text-primary-foreground/80">Email</div>
-                                    <div className="font-medium text-primary-foreground">Info.snkoverseas@gmail.com</div>
+                                    <div className="font-medium text-primary-foreground">info@snkglobalindia.com</div>
                                 </div>
                             </a>
                             <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary/90 transition-colors">

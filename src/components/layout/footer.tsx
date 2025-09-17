@@ -17,7 +17,7 @@ export default function Footer() {
   const privacyPolicyContent = {
     title: "Privacy Policy",
     lastUpdated: "Last Updated: September 15, 2025",
-    introduction: "At SNK Global & Overseas, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.",
+    introduction: "At SNK Global, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.",
     sections: [
       {
         title: "Information We Collect",
@@ -93,7 +93,7 @@ export default function Footer() {
         
         <div className="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between px-4 py-6 text-left text-sm text-muted-foreground md:px-6 md:h-20 relative z-10">
           <div className="mb-4 md:mb-0">
-            <p>&copy; {new Date().getFullYear()} SNK Global & Overseas. All Rights Reserved.</p>
+            <p>&copy; {new Date().getFullYear()} SNK Global. All Rights Reserved.</p>
           </div>
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
             <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4 md:mb-0">
@@ -219,7 +219,7 @@ export default function Footer() {
               {/* Decorative Footer */}
               <div className="bg-gradient-to-r from-primary/5 to-accent/5 p-4 text-center border-t border-border/50">
                 <p className="text-sm text-muted-foreground">
-                  SNK Global & Overseas is committed to protecting your privacy and complying with international data protection laws.
+                  SNK Global is committed to protecting your privacy and complying with international data protection laws.
                 </p>
               </div>
             </motion.div>

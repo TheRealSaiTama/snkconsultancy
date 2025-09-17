@@ -39,7 +39,7 @@ export default function Header() {
       <div className="flex h-full items-center justify-between">
         <Link href="#home" className="flex items-center gap-2 ml-4 md:ml-6">
           <div className="rounded-full border-2 border-primary p-1 bg-white">
-            <Image src="/logo.png" alt="SNK Overseas" width={1000} height={1000} className="h-22 w-20 object-contain rounded-full" />
+            <Image src="/logo.png" alt="SNK Global" width={1000} height={1000} className="h-22 w-20 object-contain rounded-full" />
           </div>
         </Link>
         <div className="flex items-center pr-4 md:pr-6">
@@ -77,7 +77,7 @@ export default function Header() {
                   <div className="flex items-center justify-between p-4 border-b">
                      <Link href="#home" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                         <div className="rounded-full border-2 border-primary p-1 bg-white">
-                          <Image src="/logo.png" alt="SNK Overseas" width={120} height={120} className="h-12 w-12 object-contain rounded-full" />
+                          <Image src="/logo.png" alt="SNK Global" width={120} height={120} className="h-12 w-12 object-contain rounded-full" />
                         </div>
                       </Link>
                     <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>

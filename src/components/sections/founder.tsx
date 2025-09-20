@@ -68,7 +68,7 @@ export default function FounderSection() {
                   <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-slate-100">
                     <Image
                       src="/sohanattri2.jpeg"
-                      alt="Sohan Attri - Founder & CEO, SNK Global"
+                      alt="Attri Family- Founder, SNK Global"
                       fill
                       priority
                       className="object-cover object-top"
@@ -98,14 +98,14 @@ export default function FounderSection() {
                   Sohan Attri
                 </h3>
                 <p className="text-xl text-slate-600 font-medium">
-                  Founder & Chief Executive Officer
+                  Founder
                 </p>
               </div>
 
               {/* Executive Biography */}
               <div className="space-y-4">
                 <p className="text-lg text-slate-700 leading-relaxed">
-                  With over a decade of distinguished experience in international recruitment and global workforce solutions, Sohan Attri has established SNK Global as a premier consultancy connecting exceptional talent with world-class opportunities.
+                  With over a decade of distinguished experience in international recruitment and global workforce solutions, Attri Family has established SNK Global as a premier consultancy connecting exceptional talent with world-class opportunities.
                 </p>
                 <p className="text-lg text-slate-700 leading-relaxed">
                   His strategic vision and commitment to excellence have transformed thousands of careers while building lasting partnerships with leading organizations across 20 countries. Under his leadership, SNK Global has become synonymous with integrity, quality, and results in the international placement industry.

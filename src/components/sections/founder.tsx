@@ -67,7 +67,7 @@ export default function FounderSection() {
                 <div className="relative bg-white rounded-2xl p-6 shadow-lg border border-slate-200/60">
                   <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-slate-100">
                     <Image
-                      src="/sohanattri.jpeg"
+                      src="/sohanattri2.jpeg"
                       alt="Sohan Attri - Founder & CEO, SNK Global"
                       fill
                       priority

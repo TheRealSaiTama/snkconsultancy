@@ -29,7 +29,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden bg-black">
+    <section id="home" className="relative min-h-screen h-[110vh] w-full overflow-hidden bg-black">
       {/* Layered backgrounds for depth */}
       <div className="absolute inset-0">
         {heroBg && (
@@ -57,12 +57,12 @@ export default function HeroSection() {
           style={{ transform: `translate(${-mousePos.x * 20}px, ${-mousePos.y * 20}px)` }} />
         
         {/* Flight paths with glow */}
-        <div className="absolute inset-0" style={{ transform: `translate(${mousePos.x * 10}px, ${mousePos.y * 10}px)` }}>
+        <div className="absolute inset-0 top-[-5%]" style={{ transform: `translate(${mousePos.x * 10}px, ${mousePos.y * 10}px)` }}>
           <SvgIcon.FlightPath className="w-full h-full opacity-30" />
         </div>
       </div>
 
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4 max-w-7xl mx-auto">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4 max-w-7xl mx-auto pb-20">
         {/* Premium trust badge */}
         <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 backdrop-blur-xl animate-fade-in mb-8">
           <span className="relative flex h-2.5 w-2.5">
@@ -129,9 +129,9 @@ export default function HeroSection() {
       </div>
       
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <span className="text-xs text-white/50 uppercase tracking-widest">Scroll to explore</span>
-        <ChevronDown className="h-6 w-6 text-white/50 animate-bounce" />
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+        <span className="text-xs text-white/60 uppercase tracking-widest font-medium">Scroll to explore</span>
+        <ChevronDown className="h-6 w-6 text-white/60 animate-bounce" />
       </div>
     </section>
   );

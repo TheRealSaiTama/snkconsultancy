@@ -78,7 +78,7 @@ export default function FounderSection() {
                   
                   {/* Executive Badge */}
                   <div className="absolute top-10 right-10 bg-slate-900 text-white text-xs font-medium px-3 py-1.5 rounded-lg">
-                    Founder & CEO
+                    Founder
                   </div>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export default function FounderSection() {
               {/* Name & Title */}
               <div>
                 <h3 className="text-4xl md:text-5xl font-light text-slate-900 mb-3 tracking-tight">
-                  Sohan Attri
+                  Attri Family
                 </h3>
                 <p className="text-xl text-slate-600 font-medium">
                   Founder
@@ -105,7 +105,7 @@ export default function FounderSection() {
               {/* Executive Biography */}
               <div className="space-y-4">
                 <p className="text-lg text-slate-700 leading-relaxed">
-                  With over a decade of distinguished experience in international recruitment and global workforce solutions, Attri Family has established SNK Global as a premier consultancy connecting exceptional talent with world-class opportunities.
+                  With over a decade of distinguished experience in international recruitment and global workforce solutions, Sohan Attri has established SNK Global as a premier consultancy connecting exceptional talent with world-class opportunities.
                 </p>
                 <p className="text-lg text-slate-700 leading-relaxed">
                   His strategic vision and commitment to excellence have transformed thousands of careers while building lasting partnerships with leading organizations across 20 countries. Under his leadership, SNK Global has become synonymous with integrity, quality, and results in the international placement industry.

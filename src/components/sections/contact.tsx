@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useEffect, useRef, useState } from "react";
-import { Mail, Phone, MapPin, Building, User, Linkedin, Bot } from 'lucide-react';
+import { Mail, Phone, MapPin, Building, User, Linkedin, Instagram, Bot } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -251,8 +251,13 @@ export default function ContactSection() {
                  <AnimatedSection delay="delay-600">
                     <div className="flex items-center gap-4">
                         <Button asChild variant="outline" size="icon" className="bg-transparent text-primary-foreground hover:bg-primary-foreground/10">
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/company/snk-global-india/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                 <Linkedin />
+                            </a>
+                        </Button>
+                        <Button asChild variant="outline" size="icon" className="bg-transparent text-primary-foreground hover:bg-primary-foreground/10">
+                            <a href="https://www.instagram.com/snk.global/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <Instagram />
                             </a>
                         </Button>
                     </div>

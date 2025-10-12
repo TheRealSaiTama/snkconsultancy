@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useEffect, useRef, useState } from "react";
-import { Mail, Phone, MapPin, Building, User, Linkedin, Instagram, MessageCircle, Bot } from 'lucide-react';
+import { Mail, Phone, MapPin, Building, User, Linkedin, Instagram, Facebook, MessageCircle, Bot } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -248,19 +248,24 @@ export default function ContactSection() {
                         ></iframe>
                     </div>
                 </AnimatedSection>
-                 <AnimatedSection delay="delay-600">
+                <AnimatedSection delay="delay-600">
                     <div className="flex items-center gap-4">
-                        <Button asChild variant="outline" size="icon" className="bg-transparent text-primary-foreground hover:bg-primary-foreground/10">
-                            <a href="https://www.linkedin.com/company/snk-global-india/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <Button asChild variant="outline" size="icon" className="bg-transparent text-primary-foreground hover:bg-primary-foreground/10 visited:text-primary-foreground focus:text-primary-foreground active:text-primary-foreground">
+                            <a href="https://www.linkedin.com/company/snk-global-india/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                 <Linkedin />
                             </a>
                         </Button>
-                        <Button asChild variant="outline" size="icon" className="bg-transparent text-primary-foreground hover:bg-primary-foreground/10">
+                        <Button asChild variant="outline" size="icon" className="bg-transparent text-primary-foreground hover:bg-primary-foreground/10 visited:text-primary-foreground focus:text-primary-foreground active:text-primary-foreground">
                             <a href="https://www.instagram.com/snk.global/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                 <Instagram />
                             </a>
                         </Button>
-                        <Button asChild variant="outline" size="icon" className="bg-transparent text-primary-foreground hover:bg-primary-foreground/10">
+                        <Button asChild variant="outline" size="icon" className="bg-transparent text-primary-foreground hover:bg-primary-foreground/10 visited:text-primary-foreground focus:text-primary-foreground active:text-primary-foreground">
+                            <a href="https://www.facebook.com/people/SNK-Global/61581280836236/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <Facebook />
+                            </a>
+                        </Button>
+                        <Button asChild variant="outline" size="icon" className="bg-transparent text-primary-foreground hover:bg-primary-foreground/10 visited:text-primary-foreground focus:text-primary-foreground active:text-primary-foreground">
                             <a href="https://wa.me/919911103791?text=Hi%20there!%20I%27d%20love%20to%20learn%20more%20about%20SNK%20Global." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                                 <MessageCircle />
                             </a>

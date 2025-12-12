@@ -24,7 +24,7 @@ const clientLogos = [
 
 export default function ClientsSection() {
   return (
-    <section className="relative py-32 overflow-hidden bg-gradient-to-b from-slate-50 to-white scroll-mt-28">
+    <section className="relative py-16 md:py-32 overflow-hidden bg-gradient-to-b from-slate-50 to-white scroll-mt-28">
       {/* Elite Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30"></div>
@@ -38,7 +38,7 @@ export default function ClientsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-12 md:mb-20"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-full text-sm font-medium text-slate-600 mb-6">
             <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
@@ -65,7 +65,7 @@ export default function ClientsSection() {
         </motion.div>
 
         {/* Premium Logo Showcase */}
-        <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-8 md:gap-12 mb-24">
+        <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-8 md:gap-12 mb-12 md:mb-24">
           {clientLogos.map((client, index) => (
             <motion.div
               key={client.name}

@@ -29,7 +29,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen h-[110vh] w-full overflow-hidden bg-black">
+    <section id="home" className="relative min-h-screen md:h-[110vh] w-full overflow-hidden bg-black">
       {/* Layered backgrounds for depth */}
       <div className="absolute inset-0">
         {heroBg && (

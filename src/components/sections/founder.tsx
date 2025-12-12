@@ -21,7 +21,7 @@ const credentials = [
 
 export default function FounderSection() {
   return (
-    <section id="founder" className="relative py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 scroll-mt-28">
+    <section id="founder" className="relative py-12 md:py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 scroll-mt-28">
       {/* Sophisticated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20"></div>
@@ -67,8 +67,8 @@ export default function FounderSection() {
                 <div className="relative bg-white rounded-2xl p-6 shadow-lg border border-slate-200/60">
                   <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-slate-100">
                     <Image
-                      src="/sohanattri2.jpeg"
-                      alt="Attri Family- Founder, SNK Global"
+                      src="/image.png"
+                      alt="Lokesh Rayal - Founder, SNK Global"
                       fill
                       priority
                       className="object-cover object-top"
@@ -95,7 +95,7 @@ export default function FounderSection() {
               {/* Name & Title */}
               <div>
                 <h3 className="text-4xl md:text-5xl font-light text-slate-900 mb-3 tracking-tight">
-                  Attri Family
+                  Lokesh Rayal
                 </h3>
                 <p className="text-xl text-slate-600 font-medium">
                   Founder
@@ -105,10 +105,10 @@ export default function FounderSection() {
               {/* Executive Biography */}
               <div className="space-y-4">
                 <p className="text-lg text-slate-700 leading-relaxed">
-                  With over a decade of distinguished experience in international recruitment and global workforce solutions, Sohan Attri has established SNK Global as a premier consultancy connecting exceptional talent with world-class opportunities.
+                  With a visionary approach to global talent mobility, Lokesh Rayal has redefined the landscape of international consultancy. His commitment to bridging the gap between exceptional talent and world-class opportunities has positioned SNK Global as a leader in the industry.
                 </p>
                 <p className="text-lg text-slate-700 leading-relaxed">
-                  His strategic vision and commitment to excellence have transformed thousands of careers while building lasting partnerships with leading organizations across 20 countries. Under his leadership, SNK Global has become synonymous with integrity, quality, and results in the international placement industry.
+                  Driven by a passion for empowering careers and fostering cross-border growth, Lokesh’s strategic leadership has cultivated lasting partnerships across 20 countries. Under his guidance, SNK Global continues to set new benchmarks for integrity, innovation, and excellence in workforce solutions.
                 </p>
               </div>
 
@@ -168,7 +168,7 @@ export default function FounderSection() {
               
               <div className="flex items-center justify-center gap-4">
                 <div className="w-12 h-px bg-white/30"></div>
-                <cite className="text-white/80 font-medium not-italic">Sohan Attri</cite>
+                <cite className="text-white/80 font-medium not-italic">Lokesh Rayal</cite>
                 <div className="w-12 h-px bg-white/30"></div>
               </div>
             </div>

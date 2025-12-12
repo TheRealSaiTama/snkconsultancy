@@ -93,7 +93,7 @@ export default function ServicesSection() {
         </div>
         
         {/* Industries Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 md:mb-32">
           {industries.map((industry, index) => {
             const IconComponent = industry.icon;
             return (

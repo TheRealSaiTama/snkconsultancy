@@ -4,13 +4,6 @@ import { z } from 'zod';
 import { recommendOptimalServices } from '@/ai/flows/recommend-optimal-services';
 import nodemailer from 'nodemailer';
 
-// --- BEST PRACTICE 1: Pre-flight check for environment variables ---
-// This fails fast with a clear error during server startup if your .env.local file is not configured correctly,
-// preventing cryptic runtime errors and making debugging much easier.
-if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS || !process.env.EMAIL_TO) {
-  throw new Error('Missing required environment variables for email functionality.');
-}
-
 // --- BEST PRACTICE 2: Add specific error messages to your Zod schema ---
 // This allows you to provide more helpful feedback to the user on the client-side, if you choose to.
 const formSchema = z.object({
@@ -28,6 +21,19 @@ export type State = {
 };
 
 export async function submitInquiry(prevState: State, formData: FormData): Promise<State> {
+  const emailUser = process.env.EMAIL_USER;
+  const emailPass = process.env.EMAIL_PASS;
+  const emailTo = process.env.EMAIL_TO;
+
+  if (!emailUser || !emailPass || !emailTo) {
+    return {
+      status: 'error',
+      message:
+        'Email service is not configured. Please try again later or contact us directly.',
+      recommendation: null,
+    };
+  }
+
   // 1. Validate form data
   const validatedFields = formSchema.safeParse({
     name: formData.get('name'),
@@ -49,11 +55,11 @@ export async function submitInquiry(prevState: State, formData: FormData): Promi
 
   try {
     // 2. Configure the email transporter using credentials from .env.local
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: process.env.EMAIL_SERVICE || 'gmail',
       auth: {
-        user: process.env.EMAIL_USER, // The email address you send from
-        pass: process.env.EMAIL_PASS, // The 16-character App Password
+        user: emailUser, // The email address you send from
+        pass: emailPass, // The 16-character App Password
       },
     });
 
@@ -61,8 +67,8 @@ export async function submitInquiry(prevState: State, formData: FormData): Promi
 
     // 3. Create the email content with UX and deliverability improvements
     const mailOptions = {
-      from: `"${name} via SNK Global" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_TO,
+      from: `"${name} via SNK Global" <${emailUser}>`,
+      to: emailTo,
       // --- BEST PRACTICE 3: Set `replyTo` for seamless communication ---
       // When you hit "Reply" in your inbox, the response will go to the user's email, not your own.
       replyTo: email,

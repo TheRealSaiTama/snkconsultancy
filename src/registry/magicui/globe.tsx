@@ -85,8 +85,9 @@ export function Globe() {
         ref={canvasRef}
         onPointerDown={(e) => {
           pointerDown.current = true;
+          const left = e.currentTarget.getBoundingClientRect().left;
           pointerInteraction.current =
-            e.clientX - Number(e.target.getBoundingClientRect().left);
+            e.clientX - left;
           canvasRef.current!.style.cursor = "grabbing";
         }}
         onPointerUp={() => {
@@ -101,9 +102,10 @@ export function Globe() {
         }}
         onPointerMove={(e) => {
           if (pointerDown.current && pointerInteraction.current !== null) {
-            const delta = e.clientX - Number(e.target.getBoundingClientRect().left) - pointerInteraction.current;
+            const left = e.currentTarget.getBoundingClientRect().left;
+            const delta = e.clientX - left - pointerInteraction.current;
             rotation.current += delta * 0.002;
-            pointerInteraction.current = e.clientX - Number(e.target.getBoundingClientRect().left);
+            pointerInteraction.current = e.clientX - left;
           }
         }}
         style={{

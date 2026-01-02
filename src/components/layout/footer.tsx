@@ -3,6 +3,7 @@
 import { Phone, Mail } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Footer() {
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
@@ -92,7 +93,8 @@ export default function Footer() {
         }}></div>
         
         <div className="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between px-4 py-6 text-left text-sm text-muted-foreground md:px-6 md:h-20 relative z-10">
-          <div className="mb-4 md:mb-0">
+          <div className="mb-4 md:mb-0 flex items-center gap-4">
+            <Image src="/LOGO2.png" alt="SNK Global" width={40} height={40} className="h-10 w-auto object-contain" />
             <p>&copy; {new Date().getFullYear()} SNK Global. All Rights Reserved.</p>
           </div>
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">

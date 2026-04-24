@@ -229,7 +229,7 @@ export default function ContactSection() {
                                 </div>
                                 <div>
                                     <div className="text-sm text-primary-foreground/80">Location</div>
-                                    <div className="font-medium text-primary-foreground">Block B, Badarpur Border, New Delhi, India</div>
+                                    <div className="font-medium text-primary-foreground">SNK Global India, Block B1, Bolck B-1, Mohan Cooperative Industrial Estate, Badarpur, New Delhi, Delhi 110044</div>
                                 </div>
                             </div>
                         </div>
@@ -238,7 +238,7 @@ export default function ContactSection() {
                 <AnimatedSection delay="delay-500">
                     <div className="aspect-video w-full">
                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.596686392538!2d77.28716003776687!3d28.521779663135213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce6b690af5aed%3A0xe80013796cc8438f!2sBlock%20B%2C%20Mohan%20Cooperative%20Industrial%20Estate%2C%20Badarpur%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1767380098547!5m2!1sen!2sin"
+                            src="https://www.google.com/maps?q=SNK%20Global%20India%2C%20Block%20B1%2C%20Bolck%20B-1%2C%20Mohan%20Cooperative%20Industrial%20Estate%2C%20Badarpur%2C%20New%20Delhi%2C%20Delhi%20110044&output=embed"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}

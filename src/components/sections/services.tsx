@@ -2,6 +2,7 @@
 
 import { Wrench, UtensilsCrossed, Factory, ShoppingCart, ShieldCheck, Ship, Plane, Search, FileText, School, UserCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const industries = [
   { 
@@ -61,6 +62,15 @@ const processSteps = [
     { icon: UserCheck, title: 'Placement', description: 'Seamlessly integrating employees into your team.' },
 ];
 
+const seoLinks = [
+  { href: '/services/manpower-recruitment', label: 'Overseas Manpower Recruitment' },
+  { href: '/services/overseas-placement', label: 'Overseas Job Placement' },
+  { href: '/industries/construction-manpower', label: 'Construction Manpower' },
+  { href: '/industries/hospitality-recruitment', label: 'Hospitality Recruitment' },
+  { href: '/industries/oil-gas-manpower', label: 'Oil and Gas Manpower' },
+  { href: '/locations/new-delhi', label: 'New Delhi Office' },
+];
+
 export default function ServicesSection() {
   return (
     <section id="services" className="content-section relative overflow-hidden scroll-mt-28">
@@ -90,6 +100,17 @@ export default function ServicesSection() {
           >
             Connecting global talent with opportunities across continents
           </motion.p>
+        </div>
+        <div className="mb-16 flex flex-wrap justify-center gap-3">
+          {seoLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
         
         {/* Industries Grid */}

@@ -7,6 +7,8 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import GlobalBackground from '@/components/layout/global-background';
 import SocialBar from '@/components/layout/social-bar';
+import JsonLd from '@/components/seo/json-ld';
+import { businessInfo, defaultSeo } from '@/lib/business-info';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -14,22 +16,52 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'SNK Global | Global Manpower Solutions from India to Middle East & Europe',
-  description:
-    'Empowering Indian talent with overseas jobs in the Middle East and Europe. Expert recruitment consultancy.',
+  metadataBase: new URL(businessInfo.url),
+  title: {
+    default: defaultSeo.title,
+    template: `%s | ${businessInfo.name}`,
+  },
+  description: defaultSeo.description,
+  keywords: defaultSeo.keywords,
+  alternates: {
+    canonical: '/',
+  },
+  applicationName: businessInfo.name,
+  authors: [{ name: businessInfo.name, url: businessInfo.url }],
+  creator: businessInfo.name,
+  publisher: businessInfo.name,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
   openGraph: {
-    title: 'SNK Global | Global Manpower Solutions from India to Middle East & Europe',
-    description: 'Empowering Indian talent with overseas jobs in the Middle East and Europe. Expert recruitment consultancy.',
+    title: defaultSeo.title,
+    description: defaultSeo.description,
     type: 'website',
-    url: 'https://snk-overseas.example.com',
+    url: businessInfo.url,
+    siteName: businessInfo.name,
+    locale: 'en_IN',
     images: [
       {
-        url: 'https://picsum.photos/seed/og-image/1200/630',
-        width: 1200,
-        height: 630,
-        alt: 'SNK Global',
+        url: '/LOGO2.png',
+        width: 800,
+        height: 800,
+        alt: businessInfo.name,
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: defaultSeo.title,
+    description: defaultSeo.description,
+    images: ['/LOGO2.png'],
   },
 };
 
@@ -50,6 +82,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
+        <JsonLd />
         <Toaster />
       </body>
     </html>

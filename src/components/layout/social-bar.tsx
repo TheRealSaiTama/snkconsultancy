@@ -1,11 +1,12 @@
 import Link from 'next/link';
-import { Linkedin, Instagram, Facebook, MessageCircle } from 'lucide-react';
+import { Linkedin, Instagram, Facebook, Youtube, MessageCircle } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/company/snk-global-india/',
   instagram: 'https://www.instagram.com/snk.global/',
   facebook: 'https://www.facebook.com/people/SNK-Global/61581280836236/',
+  youtube: 'https://www.youtube.com/@snkglobalindia',
   whatsapp: 'https://wa.me/919911103791?text=Hi%20there!%20I%27d%20love%20to%20learn%20more%20about%20SNK%20Global.',
 };
 
@@ -24,6 +25,9 @@ export default function SocialBar() {
           <SocialIcon href={SOCIAL_LINKS.facebook} label="Facebook">
             <Facebook className="h-5 w-5" />
           </SocialIcon>
+          <SocialIcon href={SOCIAL_LINKS.youtube} label="YouTube">
+            <Youtube className="h-5 w-5" />
+          </SocialIcon>
           <SocialIcon href={SOCIAL_LINKS.whatsapp} label="WhatsApp">
             <MessageCircle className="h-5 w-5" />
           </SocialIcon>
@@ -41,6 +45,9 @@ export default function SocialBar() {
           </QuickIcon>
           <QuickIcon href={SOCIAL_LINKS.facebook} label="Facebook">
             <Facebook className="h-5 w-5" />
+          </QuickIcon>
+          <QuickIcon href={SOCIAL_LINKS.youtube} label="YouTube">
+            <Youtube className="h-5 w-5" />
           </QuickIcon>
           <QuickIcon href={SOCIAL_LINKS.whatsapp} label="WhatsApp">
             <MessageCircle className="h-5 w-5" />

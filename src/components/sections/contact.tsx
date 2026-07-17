@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useEffect, useRef, useState } from "react";
-import { Mail, Phone, MapPin, Building, User, Linkedin, Instagram, Facebook, MessageCircle, Bot } from 'lucide-react';
+import { Mail, Phone, MapPin, Building, User, Linkedin, Instagram, Facebook, Youtube, MessageCircle, Bot } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -263,6 +263,11 @@ export default function ContactSection() {
                         <Button asChild variant="outline" size="icon" className="bg-transparent text-primary-foreground hover:bg-primary-foreground/10 visited:text-primary-foreground focus:text-primary-foreground active:text-primary-foreground">
                             <a href="https://www.facebook.com/people/SNK-Global/61581280836236/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                                 <Facebook />
+                            </a>
+                        </Button>
+                        <Button asChild variant="outline" size="icon" className="bg-transparent text-primary-foreground hover:bg-primary-foreground/10 visited:text-primary-foreground focus:text-primary-foreground active:text-primary-foreground">
+                            <a href="https://www.youtube.com/@snkglobalindia" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <Youtube />
                             </a>
                         </Button>
                         <Button asChild variant="outline" size="icon" className="bg-transparent text-primary-foreground hover:bg-primary-foreground/10 visited:text-primary-foreground focus:text-primary-foreground active:text-primary-foreground">

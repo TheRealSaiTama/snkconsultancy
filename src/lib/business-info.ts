@@ -20,6 +20,7 @@ export const businessInfo = {
     'https://www.linkedin.com/company/snk-global-india/',
     'https://www.instagram.com/snk.global/',
     'https://www.facebook.com/people/SNK-Global/61581280836236/',
+    'https://www.youtube.com/@snkglobalindia',
   ],
   description:
     'SNK Global India is a New Delhi-based overseas manpower recruitment agency connecting skilled Indian professionals with employers across the Middle East and Europe.',

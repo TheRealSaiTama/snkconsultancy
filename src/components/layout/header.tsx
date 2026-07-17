@@ -12,7 +12,7 @@ const navLinks = [
   { href: '#home', label: 'Home', icon: <Home /> },
   { href: '#about', label: 'About', icon: <Info /> },
   { href: '#services', label: 'Services', icon: <Briefcase /> },
-  { href: '#founder', label: 'Founder', icon: <User /> },
+  { href: '#founder', label: 'Leadership', icon: <User /> },
   { href: '#success', label: 'Success', icon: <Award /> },
   { href: '#contact', label: 'Contact', icon: <Mail /> },
 ];

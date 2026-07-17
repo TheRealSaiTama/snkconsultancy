@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
@@ -99,6 +99,15 @@ export default function Footer() {
           </div>
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
             <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4 md:mb-0">
+              <a
+                href="https://www.google.com/maps?q=28.511097,77.298004"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-primary transition-colors"
+              >
+                <MapPin className="h-4 w-4 shrink-0" />
+                <span>Block B-1, Mohan Cooperative, New Delhi</span>
+              </a>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
                 <span className="font-medium">+91 8700348338</span>

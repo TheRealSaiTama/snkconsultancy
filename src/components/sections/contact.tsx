@@ -238,7 +238,7 @@ export default function ContactSection() {
                 <AnimatedSection delay="delay-500">
                     <div className="aspect-video w-full">
                        <iframe
-                            src="https://www.google.com/maps?q=Hashtag%20Co%20Working%2C%2028.5109541%2C77.2978413&z=17&output=embed"
+                            src="https://www.google.com/maps?q=28.511097,77.298004&z=17&output=embed"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}

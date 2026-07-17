@@ -100,7 +100,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
             <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4 md:mb-0">
               <a
-                href="https://www.google.com/maps?q=28.511097,77.298004"
+                href="https://maps.app.goo.gl/BiqLnjHumUF7PL9B6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-primary transition-colors"
